@@ -1,6 +1,6 @@
-# Sort-in-Place
+# Sort in Place &middot; ![version](https://img.shields.io/badge/version-1.0.0-green.svg)
 
-Sort-in-Place is an Umbraco package with a custom media grid list view that permits sorting of media items by dragging and dropping the media items inside the grid view. This provides editors with a quicker way to sort or reorganize their media items.
+Sort in Place is an Umbraco package with a custom media grid list view that permits sorting of media items by dragging and dropping the media items inside the grid view. This provides editors with a quicker way to sort or reorganize their media items.
 
 ## How To Set Up
 
