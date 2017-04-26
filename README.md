@@ -3,7 +3,7 @@
 Sortable Drag & Drop Media is a custom Umbraco media grid list view that permits sorting of media items by dragging and dropping the media items inside the grid view. This provides editors with a quicker way to sort or reorganize their media items.
 
 ## Installation & Set Up
-
+You can get instructions on setting up the Sortable Drag & Drop Media grid view [here](https://github.com/Offroadcode/Sortable-Drag-and-Drop-Media/wiki/Installation-Guide).
 
 ## How To Use
 
