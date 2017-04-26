@@ -1,6 +1,6 @@
 (function() {
     "use strict";
-    function sortInPlaceController ($scope, $routeParams, mediaHelper, mediaResource, $location, listViewHelper, mediaTypeHelper) {
+    function SortableDragAndDropMediaController ($scope, $routeParams, mediaHelper, mediaResource, $location, listViewHelper, mediaTypeHelper) {
 
         var vm = this; 
 
@@ -145,5 +145,5 @@
         activate();
 
     };
-    angular.module("umbraco").controller("sortInPlace.controller", sortInPlaceController);
+    angular.module("umbraco").controller("sortableDragAndDropMedia.controller", SortableDragAndDropMediaController);
 })();

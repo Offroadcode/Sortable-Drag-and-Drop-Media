@@ -1,8 +1,0 @@
-{
-    javascript: [
-        "~/app_plugins/SortInPlace/js/SortInPlace.js"
-    ],
-    css: [
-        "~/app_plugins/SortInPlace/css/SortInPlace.css"
-    ]
-}

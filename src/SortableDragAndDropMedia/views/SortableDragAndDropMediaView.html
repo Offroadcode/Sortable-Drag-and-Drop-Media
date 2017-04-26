@@ -1,5 +1,5 @@
 <!-- Sort in Place -->
-<div ng-controller="sortInPlace.controller as vm" class="sort-in-place">
+<div ng-controller="sortableDragAndDropMedia.controller as vm" class="sort-in-place">
 
 <div ng-if="entityType !== 'media'">
 
@@ -57,13 +57,13 @@
          on-click-name="vm.goToItem">
       </umb-folder-grid>
 
-      <sort-in-place-umb-media-grid
+      <sortable-drag-and-drop-media-grid
          items="vm.itemsWithoutFolders"
          on-details-hover="vm.hoverMediaItemDetails"
          on-click="vm.selectItem"
          on-click-name="vm.goToItem"
          on-swap="vm.swapItems">
-      </sort-in-place-umb-media-grid>
+      </sortable-drag-and-drop-media-grid>
 
       <umb-tooltip
          ng-if="vm.mediaDetailsTooltip.show"

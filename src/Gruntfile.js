@@ -17,32 +17,24 @@ module.exports = function(grunt) {
                 spawn: false,
                 atBegin: true
             },
-            //dll: {
-            //   files: ["SortInPlace/Umbraco/SortInPlace/**/*.cs"],
-            //    tasks: ["msbuild:dist", "copy:dll"]
-            //},
             js: {
-                files: ["SortInPlace/**/*.js"],
+                files: ["SortableDragAndDropMedia/**/*.js"],
                 tasks: ["concat:dist"]
             },
             html: {
-                files: ["SortInPlace/**/*.html"],
+                files: ["SortableDragAndDropMedia/**/*.html"],
                 tasks: ["copy:html"]
             },
-            lang: {
-                files: ["SortInPlace/lang/*.xml"],
-                tasks: ["copy:lang"]
-            },
             sass: {
-                files: ["SortInPlace/**/*.scss"],
+                files: ["SortableDragAndDropMedia/**/*.scss"],
                 tasks: ["sass", "copy:css"]
             },
             css: {
-                files: ["SortInPlace/**/*.css"],
+                files: ["SortableDragAndDropMedia/**/*.css"],
                 tasks: ["copy:css"]
             },
             manifest: {
-                files: ["SortInPlace/package.manifest"],
+                files: ["SortableDragAndDropMedia/package.manifest"],
                 tasks: ["copy:manifest"]
             }
         },
@@ -53,24 +45,16 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    "SortInPlace/js/sortInPlaceMediaGrid.js",
-                    "SortInPlace/js/sortInPlace.controller.js",
+                    "SortableDragAndDropMedia/js/SortableDragAndDropMediaGrid.js",
+                    "SortableDragAndDropMedia/js/SortableDragAndDropMedia.controller.js",
                 ],
-                dest: "<%= basePath %>/js/SortInPlace.js"
+                dest: "<%= basePath %>/js/SortableDragAndDropMedia.js"
             }
         },
 
         copy: {
-            //dll: {
-            //    cwd: "SortInPlace/Umbraco/SortInPlace/bin/debug/",
-            //    src: [
-            //        "SortInPlace.dll"
-            //    ],
-            //    dest: "<%= dest %>/bin/",
-            //    expand: true
-            //},
             html: {
-                cwd: "SortInPlace/views/",
+                cwd: "SortableDragAndDropMedia/views/",
                 src: ["*.html"],
                 dest: "<%= basePath %>/views/",
                 expand: true,
@@ -78,18 +62,9 @@ module.exports = function(grunt) {
                     return dest + src;
                 }
             },
-            lang: {
-                cwd: "SortInPlace/lang",
-                src: ["en.xml", "en-US.xml"],
-                dest: "<%= basePath %>/lang/",
-                expand: true,
-                rename: function(dest, src) {
-                    return dest + src;
-                }
-            },
             css: {
-                cwd: "SortInPlace/css/",
-                src: ["SortInPlace.css"],
+                cwd: "SortableDragAndDropMedia/css/",
+                src: ["SortableDragAndDropMedia.css"],
                 dest: "<%= basePath %>/css/",
                 expand: true,
                 rename: function(dest, src) {
@@ -97,7 +72,7 @@ module.exports = function(grunt) {
                 }
             },
             manifest: {
-                cwd: "SortInPlace/",
+                cwd: "SortableDragAndDropMedia/",
                 src: ["package.manifest"],
                 dest: "<%= basePath %>/",
                 expand: true,
@@ -144,7 +119,7 @@ module.exports = function(grunt) {
                     style: "compressed"
                 },
                 files: {
-                    "SortInPlace/css/SortInPlace.css": "SortInPlace/sass/SortInPlace.scss"
+                    "SortableDragAndDropMedia/css/SortableDragAndDropMedia.css": "SortableDragAndDropMedia/sass/SortableDragAndDropMedia.scss"
                 }
             }
         },
@@ -153,37 +128,14 @@ module.exports = function(grunt) {
             build: '<%= grunt.config("basePath").substring(0, 4) == "dist" ? "dist/**/*" : "null" %>',
             tmp: ["tmp"]
         },
-
-        msbuild: {
-            options: {
-                stdout: true,
-                verbosity: "quiet",
-                maxCpuCount: 4,
-                version: 4.0,
-                buildParameters: {
-                    WarningLevel: 2,
-                    NoWarn: 1607
-                }
-            },
-            dist: {
-                src: ["SortInPlace/Umbraco/SortInPlace.csproj"],
-                options: {
-                    projectConfiguration: "Debug",
-                    targets: ["Clean", "Rebuild"]
-                }
-            }
-        }
     });
 
     grunt.registerTask("default", [
         "concat",
         "sass:dist",
         "copy:html",
-        "copy:lang",
         "copy:manifest",
-        "copy:css",
-        /*"msbuild:dist",*/
-        /*"copy:dll"*/
+        "copy:css"
     ]);
 
     grunt.registerTask("umbraco", [

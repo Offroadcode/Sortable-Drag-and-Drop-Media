@@ -1,5 +1,5 @@
 {
-  "name": "SortInPlace",
+  "name": "SortableDragAndDropMedia",
   "version": "1.0.0",
   "scripts": {
     "build": "grunt",
@@ -28,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Offroadcode/Sort-in-Place"
+    "url": "https://github.com/Offroadcode/Sortable-Drag-and-Drop-Media"
   },
   "devDependencies": {
     "grunt-msbuild": "^0.1.12",

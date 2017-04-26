@@ -1,0 +1,8 @@
+{
+    javascript: [
+        "~/app_plugins/SortableDragAndDropMedia/js/SortableDragAndDropMedia.js"
+    ],
+    css: [
+        "~/app_plugins/SortableDragAndDropMedia/css/SortableDragAndDropMedia.css"
+    ]
+}
