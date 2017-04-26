@@ -1,4 +1,4 @@
-# Sortable Drag & Drop Media &middot; ![version](https://img.shields.io/badge/version-1.0.0-green.svg)
+# Sortable Drag & Drop Media &middot; ![version](https://img.shields.io/badge/version-1.0.1-green.svg)
 
 Sortable Drag & Drop Media is a custom Umbraco media grid list view that permits sorting of media items by dragging and dropping the media items inside the grid view. This provides editors with a quicker way to sort or reorganize their media items.
 
