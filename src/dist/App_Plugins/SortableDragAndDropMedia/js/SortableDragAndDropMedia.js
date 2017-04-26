@@ -318,11 +318,14 @@
             if (indexForA > -1 && indexForB > -1) {
                 var tempItem = items[indexForB];
                 items[indexForB] = items[indexForA];
+                var tempASortOrder = items[indexForA].sortOrder;
+                items[indexForB].sortOrder = tempItem.sortOrder;
                 items[indexForA] = tempItem;
+                items[indexForA].sortOrder = tempASortOrder;
                 nodeIds[indexForA] = Number(b.id);
                 nodeIds[indexForB] = Number(a.id);
+                vm.itemsWithoutFolders = filterOutFolders(items);
                 mediaResource.sort({parentId: parentId, sortedIds: nodeIds}).then(function() {
-                    vm.itemsWithoutFolders = filterOutFolders(items);
                 });
             }
         };
