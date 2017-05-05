@@ -1,8 +1,11 @@
-# Sortable Drag & Drop Media &middot; ![version](https://img.shields.io/badge/version-1.0.1-green.svg)
+# Sortable Drag & Drop Media &middot; ![version](https://img.shields.io/badge/version-1.0.1-green.svg) [![our umbraco](https://img.shields.io/badge/our-umbraco-orange.svg)](https://our.umbraco.org/projects/backoffice-extensions/sortable-drag-drop-media/)
 
 Sortable Drag & Drop Media is a custom Umbraco media grid list view that permits sorting of media items by dragging and dropping the media items inside the grid view. This provides editors with a quicker way to sort or reorganize their media items.
 
 ## Installation & Set Up
+
+Install the selected release through the Umbraco package installer or [download and install locally from Our](https://our.umbraco.org/projects/backoffice-extensions/sortable-drag-drop-media/).
+
 You can get instructions on setting up the Sortable Drag & Drop Media grid view [here](https://github.com/Offroadcode/Sortable-Drag-and-Drop-Media/wiki/Installation-Guide).
 
 ## How To Use
